@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  texlive:
+    image: korosuke613/ubuntu-texlive-ja-devcontainer
+    command: sleep infinity
+    volumes:
+      - ./.latexmkrc:/root/.latexmkrc
+      - ../:/workspace
+    environment:
+      SHELL: "/bin/bash"
